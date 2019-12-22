@@ -1,0 +1,23 @@
+#Stage 1 - DevOps Tools
+cd ~/Downloads
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get update
+sudo apt install -y gnome-tweak-tool nmap wireshark curl python-pip default-jre default-jdk powershell
+
+#Stage 2 - Hacking Tools
+sudo apt install wifite netdiscover 'theharvester metagoofil'
+git clone 
+
+#Stage 3 - Misc. Tools
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt update
+sudo apt install spotify-client neofetch gimp audacity vlc papirus-icon-theme
+
+#Stage 4 - Other Tasks
+cd ~/
+sudo mkdir tools
+sudo mkdir scripts
+sudo mkdir loot
