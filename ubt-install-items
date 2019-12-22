@@ -12,7 +12,7 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
-sudo apt install -y gnome-tweak-tool nmap wireshark curl python-pip default-jre default-jdk powershell sublime-text code
+sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 python-pip default-jre default-jdk powershell sublime-text code
 
 #Stage 2 - Hacking Tools
 sudo apt install wifite netdiscover 'theharvester metagoofil'
@@ -28,3 +28,8 @@ sudo apt install spotify-client neofetch gimp audacity vlc papirus-icon-theme
 #Stage 4 - Other Tasks
 cd ~/
 sudo mkdir tools scripts loot wordlists
+
+#Stage 5 - git Downloads
+cd ~/tools
+git clone https://github.com/laramies/theHarvester.git
+git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
