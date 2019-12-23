@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 python-pip default-jre default-jdk powershell sublime-text code
 
 #Stage 2 - Hacking Tools
-sudo apt install wifite netdiscover 'theharvester metagoofil'
+sudo apt install wifite netdiscover
 git clone 
 
 #Stage 3 - Misc. Tools
