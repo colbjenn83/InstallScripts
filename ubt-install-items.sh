@@ -1,4 +1,5 @@
 #!/bin/sh
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 #Stage 1 - DevOps Tools
 cd ~/Downloads
 #Sublime Text
@@ -20,9 +21,10 @@ sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 python-pi
 #Stage 2 - Other Tasks
 cd ~/
 sudo mkdir tools scripts loot wordlists
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 #Add Kali-Rolling Repository
-echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
+#echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
+#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6
+#sudo apt update
 
 #Stage 3 - Hacking Tools
 sudo apt install wifite netdiscover hydra john
