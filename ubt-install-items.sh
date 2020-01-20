@@ -15,13 +15,19 @@ echo Downloading PowerShell...
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
-sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 python-pip default-jre default-jdk powershell sublime-text code
+sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 python-pip default-jre default-jdk powershell postgresql sublime-text code
 
-#Stage 2 - Hacking Tools
+#Stage 2 - Other Tasks
+cd ~/
+sudo mkdir tools scripts loot wordlists
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+#Add Kali-Rolling Repository
+echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
+
+#Stage 3 - Hacking Tools
 sudo apt install wifite netdiscover hydra john
-git clone 
 
-#Stage 3 - Misc. Tools
+#Stage 4 - Misc. Tools
 echo Downloading Spotify...
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -29,13 +35,8 @@ sudo add-apt-repository ppa:papirus/papirus
 sudo apt update
 sudo apt install spotify-client neofetch gimp audacity vlc papirus-icon-theme
 
-#Stage 4 - Other Tasks
-cd ~/
-sudo mkdir tools scripts loot wordlists
-
 #Stage 5 - git Downloads
 cd ~/tools
 git clone https://github.com/LionSec/katoolin.git
 git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
 
-#Making a change
