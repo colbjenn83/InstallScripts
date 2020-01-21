@@ -35,7 +35,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6
 sudo apt update
 
 #Stage 4 - Hacking Tools
-sudo apt install wifite netdiscover hydra john metasploit-framework -y
+sudo apt install wifite netdiscover hydra hashcat binwalk john metasploit-framework -y
 sudo service postgresql start
 sudo msfdb init
 
