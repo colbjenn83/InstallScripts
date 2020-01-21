@@ -36,6 +36,8 @@ sudo apt update
 
 #Stage 4 - Hacking Tools
 sudo apt install wifite netdiscover hydra john metasploit-framework -y
+sudo service postgresql start
+sudo msfdb init
 
 #Stage 5 - git Downloads
 cd ~/tools
