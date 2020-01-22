@@ -50,4 +50,5 @@ git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
 #Remove Kali-Rolling Repository
 sudo cp /etc/apt/sources.list.bak /etc/apt/sources.list
 sudo apt update
+sudo rm -fr ~/Downloads/*
 
