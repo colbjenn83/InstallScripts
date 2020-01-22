@@ -4,7 +4,7 @@ cd ~/Downloads
 #Sublime Text
 echo Downloading Sublime Text...
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add 
-sudo apt-get install apt-transport-https software-properties-common
+sudo apt install -y apt-transport-https software-properties-common
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 #VS Code
 echo Downloading VS Code...
@@ -23,7 +23,7 @@ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt update
-sudo apt install spotify-client neofetch gimp audacity vlc papirus-icon-theme
+sudo apt install -y spotify-client neofetch gimp audacity vlc papirus-icon-theme
 
 #Stage 3 - Other Tasks
 cd ~/
@@ -35,7 +35,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6
 sudo apt update
 
 #Stage 4 - Hacking Tools
-sudo apt install wifite netdiscover hydra hashcat binwalk john metasploit-framework -y
+sudo apt install -y wifite netdiscover hydra hashcat binwalk john metasploit-framework
 sudo service postgresql start
 sudo msfdb init
 
@@ -43,6 +43,8 @@ sudo msfdb init
 cd ~/tools
 git clone https://github.com/LionSec/katoolin.git
 git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
+#git clone https://github.com/EmpireProject/Empire.git
+#sudo /Empire/setup/install.sh
 
 #Stage 6 - Clean up
 #Remove Kali-Rolling Repository
