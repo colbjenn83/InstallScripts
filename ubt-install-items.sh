@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #Stage 1 - DevOps Tools
 cd ~/Downloads
 #Sublime Text
