@@ -15,7 +15,7 @@ echo Downloading PowerShell...
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
-sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 python-pip default-jre default-jdk powershell sublime-text code
+sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 filezilla python-pip default-jre default-jdk powershell sublime-text code
 
 #Stage 2 - Misc. Tools
 echo Downloading Spotify...
@@ -35,7 +35,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6
 sudo apt update
 
 #Stage 4 - Hacking Tools
-sudo apt install -y wifite netdiscover hydra hashcat binwalk john metasploit-framework
+sudo apt install -y wifite netdiscover hydra hashcat binwalk ettercap john metasploit-framework
 sudo service postgresql start
 sudo msfdb init
 
