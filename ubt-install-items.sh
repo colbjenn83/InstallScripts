@@ -34,7 +34,7 @@ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt update
-sudo apt install -y spotify-client neofetch gimp audacity vlc papirus-icon-theme
+sudo apt install -y spotify-client neofetch gimp audacity vlc arc-theme papirus-icon-theme
 
 #Stage 3 - Other Tasks
 cd ~/
