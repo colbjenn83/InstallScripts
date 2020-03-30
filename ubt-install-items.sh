@@ -50,8 +50,8 @@ sudo msfdb init
 cd ~/tools
 git clone https://github.com/LionSec/katoolin.git
 git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
-#git clone https://github.com/EmpireProject/Empire.git
-#sudo /Empire/setup/install.sh
+git clone https://github.com/EmpireProject/Empire.git
+sudo ./Empire/setup/install.sh
 
 #Stage 6 - Clean up
 #Remove Kali-Rolling Repository
