@@ -1,11 +1,6 @@
 #!/bin/bash
 #Stage 1 - DevOps Tools
 cd ~/Downloads
-#AWS CLI
-echo Downloading and Installing AWS CLI...
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
 #Sublime Text
 echo Downloading and Installing Sublime Text...
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add 
@@ -21,6 +16,11 @@ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-pr
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 filezilla python-pip default-jre default-jdk powershell sublime-text code
+#AWS CLI
+echo Downloading and Installing AWS CLI...
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 
 #Stage 2 - Misc. Tools
 echo Downloading and Installing Spotify...
