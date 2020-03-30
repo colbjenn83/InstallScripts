@@ -37,6 +37,7 @@ sudo mkdir tools scripts loot wordlists
 #Add Kali-Rolling Repository
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
+sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net:80 --recv-keys ED444FF07D8D0BF6
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6
 sudo apt update
 
