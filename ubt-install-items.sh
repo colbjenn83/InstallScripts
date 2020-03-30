@@ -46,7 +46,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6
 sudo apt update
 
 #Stage 4 - Hacking Tools
-sudo apt install -y wifite netdiscover hydra hashcat binwalk ettercap john beef-xss metasploit-framework
+sudo apt install -y wifite netdiscover hydra hashcat binwalk ettercap-graphical john beef-xss metasploit-framework
 sudo service postgresql start
 sudo msfdb init
 
