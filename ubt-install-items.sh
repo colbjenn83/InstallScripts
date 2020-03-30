@@ -1,11 +1,17 @@
 #!/bin/bash
 #Stage 1 - DevOps Tools
 cd ~/Downloads
+sudo apt install -y git curl
 #Sublime Text
 echo Downloading and Installing Sublime Text...
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add 
 sudo apt install -y apt-transport-https software-properties-common
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+#AWS CLI
+echo Downloading and Installing AWS CLI...
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 #VS Code
 echo Downloading and Installing VS Code...
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -15,7 +21,7 @@ echo Downloading and Installing PowerShell...
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
-sudo apt install -y gnome-tweak-tool nmap wireshark curl git python3.7 filezilla python-pip default-jre default-jdk powershell sublime-text code
+sudo apt install -y gnome-tweak-tool nmap wireshark python3.7 filezilla python-pip default-jre default-jdk powershell sublime-text code
 #AWS CLI
 echo Downloading and Installing AWS CLI...
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
