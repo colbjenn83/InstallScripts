@@ -39,7 +39,7 @@ cd ~/tools
 echo Downloading TrustedSec PTF...
 git clone https://github.com/trustedsec/ptf.git
 cd /ptf
-sudo python -m pip install -r requirements.txt
+sudo python3 -m pip install -r requirements.txt
 #Stage 6 - Clean up
 echo Finished Quick Install Script...
 
