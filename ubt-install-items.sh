@@ -1,7 +1,7 @@
 #!/bin/bash
 #Stage 1 - DevOps Tools
 cd ~/Downloads
-sudo apt install -y git curl
+sudo apt install -y git curl bat
 sleep 10
 #Sublime Text
 echo Downloading and Installing Sublime Text...
@@ -36,18 +36,20 @@ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt update
-sudo apt install -y spotify-client neofetch gimp audacity vlc papirus-icon-theme
+sudo apt install -y spotify-client neofetch gimp audacity vlc papirus-icon-theme gnome-shell-extensions
 sleep 30
 #Stage 4 - Other Tasks
 cd ~/
 sudo mkdir tools scripts loot wordlists
 sleep 10
-#Stage 5 - git Downloads
+#Stage 5 - git Downloads "tools"
 cd ~/tools
 echo Downloading TrustedSec PTF...
 git clone https://github.com/trustedsec/ptf.git
 cd /ptf
 sudo python3 -m pip install -r requirements.txt
+cd ~/tools
+git clone https://github.com/hak5darren/USB-Rubber-Ducky.git
 #Stage 6 - Clean up
 echo Finished Quick Install Script...
 
