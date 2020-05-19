@@ -31,7 +31,7 @@ sleep 10
 #Stage 2 - Misc. Tools
 echo Downloading and Installing DevOps Utilities...
 sudo apt update
-sudo apt install -y gnome-tweak-tool wifite netdiscover nmap wireshark python3-pip default-jre default-jdk golang ruby-full
+sudo apt install -y gnome-tweak-tool wifite netdiscover nmap wireshark python3-pip default-jre default-jdk golang ruby-full ansible
 sleep 10
 #Stage 3 - Misc. Tools
 echo Downloading and Installing Spotify...
@@ -43,7 +43,9 @@ sudo apt install -y spotify-client neofetch gimp audacity vlc papirus-icon-theme
 sleep 10
 #Stage 4 - Other Tasks
 cd ~/
-sudo mkdir Tools Scripts Loot Wordlists Wallpaper Avatars
+sudo mkdir Tools Scripts Loot Wordlists Wallpaper Avatars Ansible
+cd Ansible
+sudo mkdir Playbooks Inventory
 sleep 10
 #Stage 5 - git Downloads "tools"
 cd ~/tools
