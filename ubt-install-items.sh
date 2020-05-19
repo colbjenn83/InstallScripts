@@ -28,7 +28,7 @@ sleep 10
 #sudo apt update
 #sudo add-apt-repository universe
 #sleep 10
-#Stage 2 - Misc. Tools
+#Stage 2 - DevOps Tools
 echo Downloading and Installing DevOps Utilities...
 sudo apt update
 sudo apt install -y gnome-tweak-tool wifite netdiscover nmap wireshark python3-pip default-jre default-jdk golang ruby-full ansible
