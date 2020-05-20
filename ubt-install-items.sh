@@ -45,8 +45,7 @@ sudo apt install -y spotify-client neofetch gimp audacity vlc gnome-tweak-tool p
 sleep 10
 #Stage 4 - Install Hacking Tools and Dependencies
 echo Install Hacking Tools and Dependencies...
-sudo apt install -y libpcap-dev build-essential beef libssl-dev openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev nodejs libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison subversion aircrack-ng wifite crunch postgresql postgresql-contrib pyrit john hashcat wireless-tools ettercap-graphical hostapd isc-dhcp-server iptables sslstrip lighttpd dsniff reaver xterm 
-sudo gem install bettercap
+sudo apt install -y libpcap-dev build-essential openssl libreadline8 libreadline-dev zlib1g-dev nodejs libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison subversion aircrack-ng wifite crunch postgresql postgresql-contrib john hashcat wireless-tools ettercap-graphical hostapd isc-dhcp-server iptables lighttpd dsniff reaver xterm 
 #Stage 5 - Other Tasks
 cd ~
 sudo mkdir Tools Scripts Loot Wordlists Wallpaper Avatars Ansible
@@ -57,26 +56,11 @@ sleep 10
 cd ~/Tools
 echo Downloading Tools from GitHub...
 sudo git clone https://github.com/hak5darren/USB-Rubber-Ducky.git
-sudo git clone https://github.com/aanarchyy/bully.git
-cd bully*/
-cd src/
-sudo make
-sudo make install
-cd ~/Tools
-git clone https://github.com/wiire/pixiewps.git
-cd pixiewps*/
-make
-sudo make install
-cd ~/Tools
-git clone https://github.com/charlesxsh/mdk3-master.git
-cd mdk3-master
-make
-sudo make install
 #Stage 6 - Install Themes
 cd ~/Downloads/InstallScripts/
-sudo unzip X-Arc-Collection-v1.4.9.zip
+sudo unzip X-Arc-Collection-v1.4.9.zip -d X-Arc-Collection-v1.4.9
 cd X-Arc-Collection-v1.4.9 
-cp -r * /usr/share/themes
+sudo cp -r * /usr/share/themes
 cd ~
 #Stage 7 - Clean up
 echo Finished Quick Install Script...
