@@ -72,11 +72,8 @@ git clone https://github.com/charlesxsh/mdk3-master.git
 cd mdk3-master
 make
 sudo make install
-cd ~/Tools
-
-#Stage 6 - Theme Install
-cd ~/Downloads
-sudo git clone https://github.com/colbjenn83/InstallScripts/X-Arc-Collection-v1.4.9.zip
+#Stage 6 - Install Themes
+cd ~/Downloads/InstallScripts/
 sudo unzip X-Arc-Collection-v1.4.9.zip
 cd X-Arc-Collection-v1.4.9 
 cp -r * /usr/share/themes
