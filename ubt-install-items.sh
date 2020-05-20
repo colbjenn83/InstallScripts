@@ -75,7 +75,7 @@ cd ~/Tools
 
 #Stage 6 - Theme Install
 cd ~/Downloads
-sudo git clone 
+sudo git clone X-Arc-Collection-v1.4.9.zip
 #Stage 7 - Clean up
 echo Finished Quick Install Script...
 
