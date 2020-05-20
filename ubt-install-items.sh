@@ -45,7 +45,7 @@ sudo apt install -y spotify-client neofetch gimp audacity vlc gnome-tweak-tool p
 sleep 10
 #Stage 4 - Install Hacking Tools and Dependencies
 echo Install Hacking Tools and Dependencies...
-sudo apt install -y libpcap-dev build-essential libssl-dev aircrack-ng wifite postgresql postgresql-contrib pyrit john wireless-tools ettercap-graphical hostapd isc-dhcp-server iptables sslstrip lighttpd dsniff reaver xterm 
+sudo apt install -y libpcap-dev build-essential libssl-dev aircrack-ng wifite crunch postgresql postgresql-contrib pyrit john hashcat wireless-tools ettercap-graphical hostapd isc-dhcp-server iptables sslstrip lighttpd dsniff reaver xterm 
 #Stage 5 - Other Tasks
 cd ~
 sudo mkdir Tools Scripts Loot Wordlists Wallpaper Avatars Ansible
@@ -75,7 +75,11 @@ cd ~/Tools
 
 #Stage 6 - Theme Install
 cd ~/Downloads
-sudo git clone X-Arc-Collection-v1.4.9.zip
+sudo git clone https://github.com/colbjenn83/InstallScripts/X-Arc-Collection-v1.4.9.zip
+sudo unzip X-Arc-Collection-v1.4.9.zip
+cd X-Arc-Collection-v1.4.9 
+cp -r * /usr/share/themes
+cd ~
 #Stage 7 - Clean up
 echo Finished Quick Install Script...
 
