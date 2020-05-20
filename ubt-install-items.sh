@@ -1,5 +1,5 @@
 #!/bin/bash
-#Stage 1 - Utilities 
+#Stage 1 - Utilities
 cd ~/Downloads
 sudo apt install -y curl unzip apt-transport-https software-properties-common
 sleep 10
@@ -23,18 +23,17 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update
 sudo apt install -y code
 sleep 10
-#PowerShell
-#echo Downloading and Installing PowerShell...
-#wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
-#sudo dpkg -i packages-microsoft-prod.deb
-#sudo apt update
-#sudo add-apt-repository universe
-#sudo apt install -y powershell
-#sleep 10
+#Micorsoft Repositories
+echo Downloading and Installing MS Repos...
+wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt update
+sudo add-apt-repository universe
+sleep 10
 #Stage 2 - DevOps Tools
 echo Downloading and Installing DevOps Utilities...
 sudo apt update
-sudo apt install -y gnome-tweak-tool wifite netdiscover nmap wireshark python3-pip default-jre default-jdk golang ruby-full ansible
+sudo apt install -y dotnet-sdk-3.1 netdiscover nmap wireshark python3-pip default-jre default-jdk golang ruby-full ansible
 sleep 10
 #Stage 3 - Misc. Tools
 echo Downloading and Installing Spotify...
@@ -42,22 +41,41 @@ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo add-apt-repository ppa:papirus/papirus
 sudo apt update
-sudo apt install -y spotify-client neofetch gimp audacity vlc papirus-icon-theme gnome-shell-extensions
+sudo apt install -y spotify-client neofetch gimp audacity vlc gnome-tweak-tool papirus-icon-theme gnome-shell-extensions
 sleep 10
-#Stage 4 - Other Tasks
-cd ~/
+#Stage 4 - Install Hacking Tools and Dependencies
+echo Install Hacking Tools and Dependencies...
+sudo apt install -y libpcap-dev build-essential libssl-dev aircrack-ng wifite postgresql postgresql-contrib pyrit john wireless-tools ettercap-graphical hostapd isc-dhcp-server iptables sslstrip lighttpd dsniff reaver xterm 
+#Stage 5 - Other Tasks
+cd ~
 sudo mkdir Tools Scripts Loot Wordlists Wallpaper Avatars Ansible
 cd Ansible
 sudo mkdir Playbooks Inventory
 sleep 10
-#Stage 5 - git Downloads "tools"
-cd ~/tools
+#Stage 6 - git Downloads "Tools"
+cd ~/Tools
 echo Downloading Tools from GitHub...
 sudo git clone https://github.com/hak5darren/USB-Rubber-Ducky.git
-echo Downloading TrustedSec PTF...
-sudo git clone https://github.com/trustedsec/ptf.git
-cd /ptf
-sudo python3 -m pip install -r requirements.txt
-#Stage 6 - Clean up
+sudo git clone https://github.com/aanarchyy/bully.git
+cd bully*/
+cd src/
+sudo make
+sudo make install
+cd ~/Tools
+git clone https://github.com/wiire/pixiewps.git
+cd pixiewps*/
+make
+sudo make install
+cd ~/Tools
+git clone https://github.com/charlesxsh/mdk3-master.git
+cd mdk3-master
+make
+sudo make install
+cd ~/Tools
+
+#Stage 6 - Theme Install
+cd ~/Downloads
+sudo git clone 
+#Stage 7 - Clean up
 echo Finished Quick Install Script...
 
