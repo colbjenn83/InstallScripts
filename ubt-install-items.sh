@@ -45,7 +45,8 @@ sudo apt install -y spotify-client neofetch gimp audacity vlc gnome-tweak-tool p
 sleep 10
 #Stage 4 - Install Hacking Tools and Dependencies
 echo Install Hacking Tools and Dependencies...
-sudo apt install -y libpcap-dev build-essential libssl-dev aircrack-ng wifite crunch postgresql postgresql-contrib pyrit john hashcat wireless-tools ettercap-graphical hostapd isc-dhcp-server iptables sslstrip lighttpd dsniff reaver xterm 
+sudo apt install -y libpcap-dev build-essential beef libssl-dev openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev nodejs libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev automake libtool bison subversion aircrack-ng wifite crunch postgresql postgresql-contrib pyrit john hashcat wireless-tools ettercap-graphical hostapd isc-dhcp-server iptables sslstrip lighttpd dsniff reaver xterm 
+sudo gem install bettercap
 #Stage 5 - Other Tasks
 cd ~
 sudo mkdir Tools Scripts Loot Wordlists Wallpaper Avatars Ansible
