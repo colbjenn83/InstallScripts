@@ -33,7 +33,7 @@ sleep 10
 #Stage 2 - DevOps Tools
 echo Downloading and Installing DevOps Utilities...
 sudo apt update
-sudo apt install -y dotnet-sdk-3.1 netdiscover nmap wireshark virtualbox python3-pip default-jre default-jdk golang ruby-full ansible
+sudo apt install -y dotnet-sdk-3.1 netdiscover nmap wireshark putty virtualbox python3-pip default-jre default-jdk golang ruby-full ansible
 sleep 10
 #Stage 3 - Misc. Tools
 echo Downloading and Installing Spotify...
