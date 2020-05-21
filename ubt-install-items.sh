@@ -33,7 +33,7 @@ sleep 10
 #Stage 2 - DevOps Tools
 echo Downloading and Installing DevOps Utilities...
 sudo apt update
-sudo apt install -y dotnet-sdk-3.1 netdiscover nmap wireshark python3-pip default-jre default-jdk golang ruby-full ansible
+sudo apt install -y dotnet-sdk-3.1 netdiscover nmap wireshark virtualbox python3-pip default-jre default-jdk golang ruby-full ansible
 sleep 10
 #Stage 3 - Misc. Tools
 echo Downloading and Installing Spotify...
@@ -61,7 +61,12 @@ cd ~/Downloads/InstallScripts/
 sudo unzip X-Arc-Collection-v1.4.9.zip -d X-Arc-Collection-v1.4.9
 cd X-Arc-Collection-v1.4.9 
 sudo cp -r * /usr/share/themes
+#Stage 7 - Download Assets
+echo Downloading Assets...
+cd ~/Downloads/InstallScripts/
+sudo cp Corvo* ~/Avatars
+sudo cp NeoTokyo* ~/Wallpaper
 cd ~
-#Stage 7 - Clean up
+#Stage 8 - Clean up
 echo Finished Quick Install Script...
 
